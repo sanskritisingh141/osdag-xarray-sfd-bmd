@@ -8,32 +8,29 @@ The implementation includes:
 - **Task 1:** 2D Shear Force Diagram (SFD) and Bending Moment Diagram (BMD) for the central longitudinal girder.
 - **Task 2:** 3D SFD and BMD visualizations for all longitudinal girders, similar to MIDAS-style post-processing.
 
----
-
 ## Project Structure
 
+```
 osdag-xarray-sfd-bmd/
 │
 ├── data/
-│ ├── screening_task.nc # Xarray dataset containing internal forces
-│ └── node.py # Node coordinates stored as a Python dictionary
+│   ├── screening_task.nc
+│   └── node.py
 │
 ├── src/
-│ ├── task1_sfd_bmd.py # Task-1: 2D SFD & BMD for central girder
-│ └── task2_3d_sfd_bmd.py # Task-2: 3D SFD & BMD for all girders
+│   ├── task1_sfd_bmd.py
+│   └── task2_3d_sfd_bmd.py
 │
 ├── outputs/
-│ ├── task1_bmd.html
-│ ├── task1_sfd.html
-│ ├── task2_3d_sfd.html
-│ └── task2_3d_bmd.html
+│   ├── task1_bmd.html
+│   ├── task1_sfd.html
+│   ├── task2_3d_sfd.html
+│   └── task2_3d_bmd.html
 │
 ├── requirements.txt
 ├── report.pdf
 └── README.md
-
-
----
+```
 
 ## Requirements
 
@@ -42,35 +39,37 @@ osdag-xarray-sfd-bmd/
 
 Install dependencies using:
 
-```bash
-pip install -r requirements.txt
+`pip install -r requirements.txt`
 
-## Requirements
-Task 1: 2D SFD & BMD (Central Longitudinal Girder)
+
+## How to Run the Code
+
+**Task 1: 2D SFD & BMD (Central Longitudinal Girder)**
 
 Run the following command from the project root:
 
-python src/task1_sfd_bmd.py
+`python src/task1_sfd_bmd.py`
 
 
 This generates:
 
-outputs/task1_bmd.html
+- `outputs/task1_bmd.html`
 
-outputs/task1_sfd.html
-
-Task 2: 3D SFD & BMD (All Longitudinal Girders)
+- `outputs/task1_sfd.html`
+##
+**Task 2: 3D SFD & BMD (All Longitudinal Girders)**
 
 Run the following command from the project root:
 
-python src/task2_3d_sfd_bmd.py
+`python src/task2_3d_sfd_bmd.py`
 
 
 This generates:
 
-outputs/task2_3d_sfd.html
+- `outputs/task2_3d_sfd.html`
 
-outputs/task2_3d_bmd.html
+- `outputs/task2_3d_bmd.html`
+
 
 ## Output Description
 
@@ -80,6 +79,7 @@ Task-1 outputs show continuous 2D shear force and bending moment diagrams for th
 
 Task-2 outputs show 3D shear force and bending moment distributions across all girders using vertical extrusion.
 
+
 ## Notes
 
 The sign convention provided in the Xarray dataset is preserved without manual modification.
@@ -87,6 +87,7 @@ The sign convention provided in the Xarray dataset is preserved without manual m
 A uniform scaling factor is applied for clear visualization of 3D force diagrams.
 
 Node coordinates are imported directly from a Python file (node.py) as provided in the task.
+
 
 ## Author
 Sanskriti Singh
